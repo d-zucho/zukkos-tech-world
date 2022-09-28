@@ -1,0 +1,78 @@
+.heroBannerContainer {
+  width: 100%;
+  height: max(50vh, 300px);
+  background-color: #dcdcdc;
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 1rem;
+}
+
+.grab_attention {
+  align-self: end;
+  margin-bottom: 2rem;
+}
+
+.banner_details {
+  align-self: end;
+  justify-self: end;
+  text-align: right;
+}
+
+.banner_button {
+  border-radius: 15px;
+  padding: 10px 16px;
+  background-color: #f02d34;
+  color: white;
+  border: none;
+  margin-top: 40px;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  z-index: 10000 !important;
+}
+
+.midText {
+  font-size: 4rem;
+  margin-top: 4px;
+}
+
+.banner_largeText1 {
+  color: white;
+  font-size: 10em;
+  margin-left: -20px;
+  text-transform: uppercase;
+}
+
+.bannerImage {
+  width: 450px;
+  height: 450px;
+  position: absolute;
+  top: 0;
+  right: 20%;
+}
+
+/* .hero__header {
+  text-align: center;
+  font-family: 'permanent marker', cursive;
+  font-size: 48px;
+  color: rgb(48, 48, 110);
+}
+
+.hero__header__subtext {
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  font-size: 16px;
+  color: rgba(96, 96, 101, 0.708);
+}
+
+.smallText {
+  font-size: 1rem;
+}
+
+/* .deal-of-the-day__title {
+  font-family: 'Poppins', cursive;
+  font-size: calc(1.5rem + 0.775vw);
+  color: rgb(48, 48, 110);
+  padding: 1em;
+} */
