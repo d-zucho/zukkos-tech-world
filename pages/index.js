@@ -13,9 +13,9 @@ const Home = ({ products, bannerData }) => {
           Best of the Best in CPU technology
         </p>
       </div>
-      <div className='product-list'>
+      <div className='products-container'>
         {products?.map((product) => (
-          <Product product={product} key={bannerData} />
+          <Product product={product} key={product._id} />
         ))}
       </div>
       {/* <div className='deal-of-the-day'>

@@ -1,24 +1,27 @@
 import { useNextSanityImage } from 'next-sanity-image'
-import Image from 'next/image'
+// import Image from 'next/image'
+import Link from 'next/link'
 import { client } from '../lib/client'
 
 import { urlFor } from '../lib/client'
 
-const Product = ({ product }) => {
-  const imageProps = useNextSanityImage(client, product.image)
+const Product = ({ product: { image, name, slug, price } }) => {
   return (
-    <div className='product-container'>
-      <h3>{product.name}</h3>
-      <div className='product-image'>
-        <Image
-          {...imageProps}
-          src={urlFor(product.image)}
-          width='250px'
-          height='250px'
-          alt='product image from product.js'
-          layout='fill'
-        />
-      </div>
+    <div>
+      <Link href={`product/${slug.current}`}>
+        <div className='product-card'>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={urlFor(image && image[0])}
+            alt=' '
+            width={250}
+            height={250}
+            className='product-image'
+          />
+          <p className='product-name'>{name}</p>
+          <p className='product-price'>{price}</p>
+        </div>
+      </Link>
     </div>
   )
 }
