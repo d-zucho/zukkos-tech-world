@@ -14,7 +14,9 @@ const Home = ({ products, bannerData }) => {
         </p>
       </div>
       <div className='product-list'>
-        {products?.map((product) => product.name)}
+        {products?.map((product) => (
+          <Product product={product} key={bannerData} />
+        ))}
       </div>
       {/* <div className='deal-of-the-day'>
         <h3 className='deal-of-the-day__title'>Deal of the Day</h3>
