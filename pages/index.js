@@ -23,7 +23,7 @@ const Home = ({ products, bannerData }) => {
         <p>Get the best deals while they last!</p>
         <a href='#'>alkshdlakshd</a>
       </div> */}
-      <FooterBanner />
+      <FooterBanner footerBanner={bannerData && bannerData[0]} />
     </>
   )
 }
